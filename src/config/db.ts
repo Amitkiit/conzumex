@@ -34,6 +34,12 @@ const executeInMemory = async (query: string, params: any[] = []) => {
     return [[user ? { ...user } : undefined].filter(Boolean), []];
   }
 
+  if (normalized.includes('select id from wallets where user_id = ?')) {
+    const [userId] = params;
+    const wallet = inMemoryData.wallets.find((row) => row.userId === userId);
+    return [[wallet ? { id: wallet.id } : undefined].filter(Boolean), []];
+  }
+
   if (normalized.startsWith('select id, user_id as userid, name, currency, balance, created_at as createdat from wallets where user_id = ?')) {
     const [userId] = params;
     const wallet = inMemoryData.wallets.find((row) => row.userId === userId);
