@@ -1,0 +1,34 @@
+version: '3.9'
+services:
+  app:
+    build: .
+    ports:
+      - '3000:3000'
+    environment:
+      - PORT=3000
+      - DB_HOST=mysql
+      - DB_PORT=3306
+      - DB_USER=root
+      - DB_PASSWORD=example
+      - DB_NAME=conzumex
+      - REDIS_URL=redis://redis:6379
+      - JWT_SECRET=supersecret
+      - RATE_LIMIT_WINDOW_MS=60000
+      - RATE_LIMIT_MAX=100
+    depends_on:
+      - mysql
+      - redis
+
+  mysql:
+    image: mysql:8.1
+    environment:
+      - MYSQL_ROOT_PASSWORD=example
+      - MYSQL_DATABASE=conzumex
+    ports:
+      - '3306:3306'
+    command: --default-authentication-plugin=mysql_native_password
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - '6379:6379'
