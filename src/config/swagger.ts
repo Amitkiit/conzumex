@@ -4,8 +4,6 @@ import { env } from './env';
 
 const routePath: readonly string[] = ['./src/routes/*.ts'];
 
-console.log('Swagger Route Path:', routePath);
-
 const options = {
   definition: {
     openapi: '3.0.0',
@@ -30,8 +28,3 @@ const options = {
 };
 
 export const swaggerSpec = swaggerJSDoc(options);
-
-console.log(
-  'Swagger Paths Found:',
-  Object.keys((swaggerSpec as any).paths || {})
-);
