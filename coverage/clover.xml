@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1780877643886" clover="3.2.0">
-  <project timestamp="1780877643886" name="All files">
+<coverage generated="1780932211477" clover="3.2.0">
+  <project timestamp="1780932211478" name="All files">
     <metrics statements="517" coveredstatements="432" conditionals="140" coveredconditionals="75" methods="92" coveredmethods="78" elements="749" coveredelements="585" complexity="0" loc="517" ncloc="517" packages="9" files="30" classes="30"/>
     <package name="src">
       <metrics statements="19" coveredstatements="19" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -9,22 +9,22 @@
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
         <line num="7" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
         <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
         <line num="11" count="1" type="stmt"/>
         <line num="13" count="1" type="stmt"/>
-        <line num="14" count="1" type="stmt"/>
         <line num="15" count="1" type="stmt"/>
-        <line num="16" count="1" type="stmt"/>
-        <line num="17" count="1" type="stmt"/>
-        <line num="18" count="1" type="stmt"/>
-        <line num="19" count="1" type="stmt"/>
         <line num="20" count="1" type="stmt"/>
-        <line num="22" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.config">
@@ -197,11 +197,11 @@
       </file>
       <file name="swagger.ts" path="C:\Users\lenovo\OneDrive\Desktop\conzumex\src\config\swagger.ts">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="30" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.controllers">
