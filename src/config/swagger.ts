@@ -1,8 +1,10 @@
-
 import swaggerJSDoc from 'swagger-jsdoc';
 import { env } from './env';
 
-const routePath: readonly string[] = ['./src/routes/*.ts'];
+const routePath = [
+  './src/routes/*.ts',
+  './dist/src/routes/*.js',
+];
 
 const options = {
   definition: {
@@ -28,4 +30,5 @@ const options = {
 };
 
 export const swaggerSpec = swaggerJSDoc(options);
+
 console.log('SWAGGER PATHS:', Object.keys((swaggerSpec as any).paths || {}));
