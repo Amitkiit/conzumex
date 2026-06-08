@@ -12,21 +12,19 @@ import { swaggerSpec } from './config/swagger';
 
 const app = express();
 
-app.use(helmet());
+app.use(
+  helmet({
+    hsts: false,
+  })
+);
 app.use(rateLimiter);
 app.use(express.json());
-
-app.get('/swagger-json', (_req, res) => {
-  res.json(swaggerSpec);
-});
 
 app.use(
   '/api/docs',
   swaggerUi.serve,
-  swaggerUi.setup(undefined, {
-    swaggerOptions: {
-      url: '/swagger-json',
-    },
+  swaggerUi.setup(swaggerSpec, {
+    explorer: true,
   })
 );
 
