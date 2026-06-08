@@ -3,6 +3,7 @@ import { env } from '../config/env';
 
 const logger = createLogger({
   level: env.nodeEnv === 'production' ? 'info' : 'debug',
+  silent: env.nodeEnv === 'test',
   format: format.combine(
     format.timestamp({ format: 'YYYY-MM-DD HH:mm:ss' }),
     format.errors({ stack: true }),
