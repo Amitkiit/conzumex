@@ -9,7 +9,7 @@ services:
       - DB_HOST=mysql
       - DB_PORT=3306
       - DB_USER=root
-      - DB_PASSWORD=example
+      - DB_PASSWORD=Amit@1604
       - DB_NAME=conzumex
       - REDIS_URL=redis://redis:6379
       - JWT_SECRET=supersecret
@@ -22,7 +22,7 @@ services:
   mysql:
     image: mysql:8.1
     environment:
-      - MYSQL_ROOT_PASSWORD=example
+      - MYSQL_ROOT_PASSWORD=Amit@1604
       - MYSQL_DATABASE=conzumex
     ports:
       - '3306:3306'
