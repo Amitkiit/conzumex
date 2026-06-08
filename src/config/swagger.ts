@@ -28,3 +28,4 @@ const options = {
 };
 
 export const swaggerSpec = swaggerJSDoc(options);
+console.log('SWAGGER PATHS:', Object.keys((swaggerSpec as any).paths || {}));
