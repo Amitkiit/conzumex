@@ -6,6 +6,10 @@ const routePath = [
   './dist/src/routes/*.js',
 ];
 
+const swaggerServerUrl =
+  process.env.SWAGGER_SERVER_URL ||
+  `http://localhost:${env.port}`;
+
 const options = {
   definition: {
     openapi: '3.0.0',
@@ -14,7 +18,11 @@ const options = {
       version: '1.0.0',
       description: 'API documentation for the Conzumex backend',
     },
-    servers: [{ url: `http://localhost:${env.port}` }],
+    servers: [
+      {
+        url: swaggerServerUrl,
+      },
+    ],
     components: {
       securitySchemes: {
         bearerAuth: {

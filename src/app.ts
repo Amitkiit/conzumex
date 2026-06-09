@@ -12,11 +12,7 @@ import { swaggerSpec } from './config/swagger';
 
 const app = express();
 
-app.use(
-  helmet({
-    hsts: false,
-  })
-);
+app.use(helmet());
 app.use(rateLimiter);
 app.use(express.json());
 
