@@ -16,6 +16,7 @@ app.use(
   helmet({
     hsts: false,
     contentSecurityPolicy: false,
+    crossOriginOpenerPolicy: false,
   })
 );
 app.use(rateLimiter);
